@@ -24,7 +24,7 @@ curl -s https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/He
 After completing the tasks above, enter the 2nd command:
 
 ```
-curl -s https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/HemiMinerSetup2.sh | bash
+bash -i <(curl -s https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/HemiMinerSetup2.sh)
 ```
 # You can also manually start a node:
 
