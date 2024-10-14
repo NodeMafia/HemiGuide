@@ -13,7 +13,7 @@ To fully participate in the Hemi Testnet we need to log in to https://points.abs
 
 ## Node installation
 
-Our installers can be used for quick installation. To get started, enter: 
+Our installers can be used for quick installation or update node. To get started, enter: 
 
 ```
 curl -s https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/HemiMinerSetup1.sh | bash
@@ -24,7 +24,7 @@ curl -s https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/He
 After completing the tasks above, enter the 2nd command:
 
 ```
-bash -i <(curl -s https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/HemiMinerSetup2.sh)
+curl -O https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/HemiMinerSetup2Update.sh && chmod +x HemiMinerSetup2Update.sh && HemiMinerSetup2Update.sh
 ```
 # You can also manually start a node:
 
@@ -34,18 +34,18 @@ mkdir HemiMiner && cd HemiMiner
 ```
 Download the required archive
 ```
-wget https://github.com/hemilabs/heminetwork/releases/download/v0.4.3/heminetwork_v0.4.3_linux_amd64.tar.gz
+wget https://github.com/hemilabs/heminetwork/releases/download/v0.4.5/heminetwork_v0.4.5_linux_amd64.tar.gz
 ```
 Unpack the archive
 ```
-tar -zxvf heminetwork_v0.4.3_linux_amd64.tar.gz 
+tar -zxvf heminetwork_v0.4.5_linux_amd64.tar.gz
 ```
 ```
-rm heminetwork_v0.4.3_linux_amd64.tar.gz 
+rm heminetwork_v0.4.5_linux_amd64.tar.gz
 ```
 Navigate into the unpacked directory
 ```
-cd heminetwork_v0.4.3_linux_amd64/
+cd heminetwork_v0.4.5_linux_amd64/
 ```
 Check the contents of the directory
 ```
@@ -70,7 +70,7 @@ eval $(jq -r '. | "ETHEREUM_ADDRESS=\(.ethereum_address)\nNETWORK=\(.network)\nP
 Export environment variables
 ```
 export POPM_BTC_PRIVKEY=$PRIVATE_KEY
-export POPM_STATIC_FEE=50
+export POPM_STATIC_FEE=200
 export POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
 ```
 Navigate into 
@@ -86,7 +86,7 @@ eval $(jq -r '. | "ETHEREUM_ADDRESS=\(.ethereum_address)\nNETWORK=\(.network)\nP
 ```
 ```
 export POPM_BTC_PRIVKEY=$PRIVATE_KEY
-export POPM_STATIC_FEE=50
+export POPM_STATIC_FEE=200
 export POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
 ```
 Start
