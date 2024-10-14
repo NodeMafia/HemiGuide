@@ -104,5 +104,5 @@ To stop HemiMiner: screen -r Hemi_nodeeval -X quit
 
 # NodeMafia
 EN Telegram: soon..
-RU Telegram: https://t.me/SixThoughtsLines
+RU Telegram: https://t.me/NodeMafia
 GitHub: https://github.com/NodeMafia
