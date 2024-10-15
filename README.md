@@ -24,7 +24,7 @@ curl -s https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/He
 After completing the tasks above, enter the 2nd command:
 
 ```
-curl -O https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/HemiMinerSetup2Update.sh && chmod +x HemiMinerSetup2Update.sh && HemiMinerSetup2Update.sh
+curl -O https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/HemiMinerSetup2Update.sh && chmod +x HemiMinerSetup2Update.sh && ./HemiMinerSetup2Update.sh
 ```
 # You can also manually start a node:
 
@@ -75,7 +75,7 @@ export POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
 ```
 Navigate into 
 ```
-cd HemiMiner/heminetwork_v0.4.3_linux_amd64/
+cd HemiMiner/heminetwork_v0.4.5_linux_amd64/
 ```
 Create screen session 
 ```
