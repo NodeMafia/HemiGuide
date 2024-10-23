@@ -1,4 +1,4 @@
-# Hemi Network 
+# Hemi Network v0.5.0
 
 ![image](https://github.com/user-attachments/assets/e91eb3f1-93f3-4c3f-80de-b574a085527e)
 
@@ -16,16 +16,15 @@ To fully participate in the Hemi Testnet we need to log in to https://points.abs
 Our installers can be used for quick installation or update node. To get started, enter: 
 
 ```
-curl -s https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/HemiMinerSetup1.sh | bash
+curl -sO https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/HemiMinerSetup.sh && chmod +x HemiMinerSetup.sh && ./HemiMinerSetup.sh
 ```
 1. Join the Hemi Discord 'https://discord.gg/hemixyz' and request tBTC in the faucet channel with the command /tbtc-faucet to the wallet at this address: $PUBKEY_HASH
 2. Check here if your Bitcoin has arrived: 'https://mempool.space/testnet/address/ $PUBKEY_HASH
 
-After completing the tasks above, enter the 2nd command:
+After completing the tasks above prss Enter and start miner.
+![image](https://github.com/user-attachments/assets/c752a259-9bdc-4fc2-a440-2a9352f6a782)
 
-```
-curl -O https://raw.githubusercontent.com/NodeMafia/HemiGuide/refs/heads/main/HemiMinerSetup2Update.sh && chmod +x HemiMinerSetup2Update.sh && ./HemiMinerSetup2Update.sh
-```
+
 # You can also manually start a node:
 
 Create directory and navigate into it
