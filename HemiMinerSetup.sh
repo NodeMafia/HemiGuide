@@ -162,7 +162,7 @@ start_hemi() {
 echo "Please choose an option:"
 echo "1. First Start (Install and Setup Hemi)"
 echo "2. Start Hemi"
-echo "3. Update Hemi to version 0.4.5, delete the folder, and start the miner"
+echo "3. Update Hemi to version 0.5.0, delete the folder, and start the miner"
 
 read -p "Enter your choice (1, 2, or 3): " choice
 
