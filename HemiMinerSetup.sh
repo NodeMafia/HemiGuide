@@ -100,8 +100,13 @@ first_start() {
 
 # Function to update Hemi
 update_hemi() {
-    echo "Terminating current screen session 'Hemi_nodeeval' (if it exists)..."
-    screen -r Hemi_nodeeval -X quit || echo "Session 'Hemi_nodeeval' not found."
+    echo "Terminating all screen sessions starting with 'Hemi_nodeeval'..."
+    
+    # Use a more precise way to find and terminate sessions
+    screen -ls | grep -oE '[0-9]+\.Hemi_nodeeval' | while read -r session; do
+        screen -S "$session" -X quit
+        echo "Terminated session '$session'"
+    done
 
     TARGET_DIR="$HOME/HemiMiner/"
     echo "Looking for folders starting with 'heminetwork_v' in $TARGET_DIR..."
@@ -115,7 +120,7 @@ update_hemi() {
         echo "Folder starting with 'heminetwork_v' not found."
     fi
 
-    echo "Downloading Hemi version 0.4.5..."
+    echo "Downloading Hemi version 0.5.0..."
     wget https://github.com/hemilabs/heminetwork/releases/download/v0.5.0/heminetwork_v0.5.0_linux_amd64.tar.gz -P /tmp/
 
     NEW_FOLDER_NAME="heminetwork_v0.5.0_linux_amd64"
