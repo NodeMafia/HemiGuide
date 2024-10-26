@@ -28,6 +28,15 @@ fi
 
 # Function for the first start
 first_start() {
+    # Prompt for custom fee
+    read -p "Do you want to set a custom fee (Gas, POPM_STATIC_FEE)? Press y/n: " choice
+    if [[ "$choice" == "y" ]]; then
+        read -p "Enter custom fee value: " custom_fee
+        export POPM_STATIC_FEE=$custom_fee
+    else
+        export POPM_STATIC_FEE=300
+    fi
+
     echo ""
     echo "Creating directory and navigating into it..."
     mkdir HemiMiner && cd HemiMiner
@@ -83,7 +92,6 @@ first_start() {
     echo ""
     echo "Exporting environment variables..."
     export POPM_BTC_PRIVKEY=$PRIVATE_KEY
-    export POPM_STATIC_FEE=300
     export POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
 
     echo ""
@@ -100,9 +108,16 @@ first_start() {
 
 # Function to update Hemi
 update_hemi() {
+    # Prompt for custom fee
+    read -p "Do you want to set a custom fee (Gas, POPM_STATIC_FEE)? Press y/n: " choice
+    if [[ "$choice" == "y" ]]; then
+        read -p "Enter custom fee value: " custom_fee
+        export POPM_STATIC_FEE=$custom_fee
+    else
+        export POPM_STATIC_FEE=300
+    fi
+
     echo "Terminating all screen sessions starting with 'Hemi_nodeeval'..."
-    
-    # Use a more precise way to find and terminate sessions
     screen -ls | grep -oE '[0-9]+\.Hemi_nodeeval' | while read -r session; do
         screen -S "$session" -X quit
         echo "Terminated session '$session'"
@@ -141,7 +156,7 @@ start_hemi() {
         eval \$(jq -r '. | \"ETHEREUM_ADDRESS=\(.ethereum_address)\nNETWORK=\(.network)\nPRIVATE_KEY=\(.private_key)\nPUBLIC_KEY=\(.public_key)\nPUBKEY_HASH=\(.pubkey_hash)\"' ~/popm-address.json)
 
         export POPM_BTC_PRIVKEY=\$PRIVATE_KEY
-        export POPM_STATIC_FEE=300
+        export POPM_STATIC_FEE=${POPM_STATIC_FEE}
         export POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
 
         echo \"Ethereum Address: \$ETHEREUM_ADDRESS\"
@@ -186,3 +201,4 @@ case $choice in
     echo "Invalid choice. Exiting."
     ;;
 esac
+``
