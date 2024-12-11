@@ -1,4 +1,4 @@
-# Hemi Network v0.5.0
+# Hemi Network v0.8.0
 
 ![image](https://github.com/user-attachments/assets/e91eb3f1-93f3-4c3f-80de-b574a085527e)
 
