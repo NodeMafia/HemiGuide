@@ -33,18 +33,18 @@ mkdir HemiMiner && cd HemiMiner
 ```
 Download the required archive
 ```
-wget https://github.com/hemilabs/heminetwork/releases/download/v0.4.5/heminetwork_v0.4.5_linux_amd64.tar.gz
+wget https://github.com/hemilabs/heminetwork/releases/download/v0.8.0/heminetwork_v0.8.0_linux_amd64.tar.gz
 ```
 Unpack the archive
 ```
-tar -zxvf heminetwork_v0.4.5_linux_amd64.tar.gz
+tar -zxvf heminetwork_v0.8.0_linux_amd64.tar.gz
 ```
 ```
-rm heminetwork_v0.4.5_linux_amd64.tar.gz
+rm heminetwork_v0.8.0_linux_amd64.tar.gz
 ```
 Navigate into the unpacked directory
 ```
-cd heminetwork_v0.4.5_linux_amd64/
+cd heminetwork_v0.8.0_linux_amd64/
 ```
 Check the contents of the directory
 ```
@@ -74,7 +74,7 @@ export POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
 ```
 Navigate into 
 ```
-cd HemiMiner/heminetwork_v0.4.5_linux_amd64/
+cd HemiMiner/heminetwork_v0.8.0_linux_amd64/
 ```
 Create screen session 
 ```
